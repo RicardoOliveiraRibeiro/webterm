@@ -1,0 +1,68 @@
+/* Default (dark mode) */
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --button-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dark mode */
+  }
+  
+  /* Light mode */
+  .light-mode {
+    --bg-color: #fff;
+    --text-color: #000;
+    --button-shadow: none; /* Remove shadow for light mode */
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toggle-button:hover {
+    opacity: 0.8;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  img {
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: var(--button-shadow); /* Conditional shadow based on mode */
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.9;
+    margin-right: 20px;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  
+  
